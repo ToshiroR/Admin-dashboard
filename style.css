@@ -27,3 +27,22 @@ button {
   background-color: red;
 
 }
+
+.projects {
+  background-color: blueviolet;
+  border: var(--border-size);
+}
+
+.card {
+  background-color: azure;
+  border: var(--border-size);
+  
+}
+
+.announcements {
+  border: var(--border-size);
+}
+
+.trending {
+  border: var(--border-size);
+}
