@@ -134,16 +134,56 @@ a.name {
 
 /* ----DashBoard styles---- */ 
 
+
 .dashboard {
   border: var(--border-size);
   background-color: red;
   grid-row: 1/3;
   
-  
-  
-
 
 }
+
+.db-header img {
+  height: 50px;
+}
+
+.db-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+}
+
+ul, li {
+  list-style: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+
+}
+
+.db_links {
+display: flex;
+flex-direction: column;
+gap: 40px;
+
+}
+
+.db_links li {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  
+}
+
+.db_links img {
+  height: 35px;
+  
+  
+}
+
+
 
 /* ----project cards----- */
 
