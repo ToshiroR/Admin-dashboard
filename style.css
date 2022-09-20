@@ -189,18 +189,19 @@ gap: 40px;
 
 .p-container {
   background-color: blueviolet;
-
   grid-column: 2/3;
-  display: grid;
-  
-  
   
 
 }
 
 .projects { 
+  padding: 40px 20px;
   border: var(--border-size);
+
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
   
+  gap: 15px;
   
 
 }
@@ -208,19 +209,39 @@ gap: 40px;
 .card {
   background-color: azure;
   border: var(--border-size);
+  text-align: start;
+
+  padding: 15px;
   
   
-  
-  
-  
+}
+
+.annouce-title {
+  grid-column: 4/5;
+  grid-row: 1/1;
+  position: relative;
+
 }
 
 .announcements {
-  border: var(--border-size);
+  
+  grid-column: 4/5;
+  grid-row: 1;
+  
   
 }
 
+.feed-card {
+
+  border: var(--border-size);
+}
+
+.trending-title {
+  
+
+}
 .trending {
   border: var(--border-size);
-  
+  grid-column: 4/5;
+  grid-row: 2;
 }
