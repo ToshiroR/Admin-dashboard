@@ -1,5 +1,9 @@
 :root {
   --border-size: 2px solid black;
+  --background-color-black: #283046;
+  --button-color: #5d51e7;
+  --text-color: #5d51e7;
+  --bs-indigo: #9d41e8;
 
 }
 
@@ -30,21 +34,22 @@ body {
 
 
 
-input[type=search] {
 
-}
 
 /* ----header and header items---- */
 .header {
-  border: var(--border-size);
-  background-color: aqua;
   
+  background-color: var(--background-color-black);
+  color: var(--text-color);
+  border-bottom: 1px solid #5d51e7;
+  padding: 0 3rem;
+
   grid-column: 2/3;
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1fr;
   
-  padding: 0 3rem;
+  
 
 }
 
@@ -71,11 +76,16 @@ input[type=search] {
 input[type=search] {
   width: 30rem;
   height: 2.3rem;
-  background-color: rgb(206, 206, 206);
+  background-color: var(--background-color-black);
   border-radius: 20px;
   font-size: 22px;
   font-weight: 600;
   border: var(--border-size);
+  color: var(--text-color);
+}
+
+input[type=search]:active {
+  border: #5d51e7;
 }
 
 /* ----- intro ----- */
@@ -120,14 +130,14 @@ a.name {
   font-size: 22px;
   font-weight: 500;
 
-  background-color: blueviolet;
+  background-color: var(--button-color);
   transition-duration: 0.4s;
   
 }
 
 .share-btns button:hover {
-  background-color: azure;
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: var(--bs-indigo);
+  box-shadow: 0 12px 16px 0 var(--button-color), 0 17px 50px 0 var(--button-color);
 }
 
 
@@ -136,9 +146,10 @@ a.name {
 
 
 .dashboard {
-  border: var(--border-size);
-  background-color: red;
+  color: var(--text-color);
+  background-color: var(--background-color-black);
   grid-row: 1/3;
+  border-right:1px solid #5d51e7;
   
 
 }
@@ -188,13 +199,13 @@ gap: 40px;
 /* ----project cards----- */
 
 .p-container {
-  background-color: blueviolet;
-  
+  background-color: rgb(10, 13, 16);
+  color: var(--text-color);
 
   grid-column: 2/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  
+  font-weight: 600;
 }
 
 
@@ -215,25 +226,40 @@ gap: 40px;
 }
 
 .card {
-  background-color: azure;
-  border-left: 7px solid blue;
-  text-align: start;
+  background-color: var(--background-color-black);
+  border-left: 7px solid #5d51e7;
+
   
   padding: 15px;
-  box-shadow: 10px 10px 11px -6px rgba(0,0,0,0.69);
+  box-shadow: var(--button-color) 0px 2px 4px, var(--button-color) 0px 7px 13px -3px, var(--button-color) 0px -3px 0px inset;
+
+  display: grid;
+}
+
+.card-share {
+  text-align: end;
+  padding-right: 20px;
   
-  
+}
+
+p.title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
 }
 /* ----Announcements Card---- */
 
 .annouce-title {
   grid-column: 4/5;
   grid-row: 1/1;
+  margin-bottom: 0;
+  
  
 
 }
 
 .announcements {
+  color: var(--text-color);
   padding: 0 15px;
   
   grid-column: 4/5;
@@ -243,9 +269,14 @@ gap: 40px;
 }
 
 .feed {
-  border: var(--border-size);
+  
+  background-color: var(--background-color-black);
   border-radius: 10px;
-  box-shadow: 10px 10px 11px -6px rgba(0,0,0,0.69);
+  box-shadow: var(--button-color) 0px 2px 4px, var(--button-color) 0px 7px 13px -3px, var(--button-color) 0px -3px 0px inset;
+  padding: 15px;
+  text-align: start;
+  
+
   
 
 
@@ -254,16 +285,19 @@ gap: 40px;
 /* ----Trending Card----*/
 
 .trending-title {
-  margin-top: 0;
+  margin: 0;
 }
 
 .trending {
   grid-column: 4/5;
   padding: 15px;
+  color: var(--text-color);
 }
 
 .user {
-  border: var(--border-size);
+  
+  background-color: var(--background-color-black);
   border-radius: 10px;
-  box-shadow: 10px 10px 11px -6px rgba(0,0,0,0.69);
+  padding: 15px;
+  box-shadow: var(--button-color) 0px 2px 4px, var(--button-color) 0px 7px 13px -3px, var(--button-color) 0px -3px 0px inset;
 }
