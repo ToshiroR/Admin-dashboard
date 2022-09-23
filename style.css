@@ -1,9 +1,10 @@
 :root {
-  --border-size: 2px solid black;
+  --border-size: 2px solid #5d51e7;
   --background-color-black: #283046;
   --button-color: #5d51e7;
-  --text-color: #5d51e7;
+  --text-color: #a59eff;
   --bs-indigo: #9d41e8;
+  --purple-boxshadow: 0 12px 16px 0 #5d51e7, 0 17px 50px 0 #5d51e7;
 
 }
 
@@ -20,10 +21,13 @@ a {
 body {
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  font-size: 22px;
+
 }
 
-
+img {
+  height: 24px;
+}
 
 .container {
   display: grid;
@@ -69,7 +73,8 @@ body {
 }
 
 .search-btn:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: var(--purple-boxshadow);
+  background-color: var(--button-color);
   
 }
 
@@ -77,16 +82,37 @@ input[type=search] {
   width: 30rem;
   height: 2.3rem;
   background-color: var(--background-color-black);
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 700;
   border: var(--border-size);
   color: var(--text-color);
+
+  outline: none;
 }
 
-input[type=search]:active {
-  border: #5d51e7;
+input[type=search]:hover {
+  box-shadow: var(--purple-boxshadow);
 }
+
+/* ---- alerts bell ---- */
+.bell-btn {
+  border-radius: 5px;
+}
+
+.bell-btn:hover {
+  box-shadow: var(--purple-boxshadow);
+  background-color: var(--button-color);
+  height: 30px;
+  
+}
+
+.icon {
+  
+  border-radius: 60%;
+
+}
+
 
 /* ----- intro ----- */
 
@@ -174,9 +200,10 @@ ul, li {
 }
 
 .db_links {
-display: flex;
-flex-direction: column;
-gap: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
 
 }
 
@@ -184,14 +211,20 @@ gap: 40px;
   display: flex;
   align-items: center;
   gap: 30px;
+  
 
   
 }
 
-.db_links img {
+.db_links img:hover {
   height: 35px;
-  
-  
+  background-color: var(--button-color);
+}
+
+.db_links li:hover {
+  background-color: rgb(10 13 16);
+  border-radius: 10px;
+
 }
 
 
@@ -238,14 +271,20 @@ gap: 40px;
 
 .card-share {
   text-align: end;
-  padding-right: 20px;
+  padding: 20px;
+  height: 2.5rem;
   
+}
+
+.card-share img:hover {
+  background-color: var(--button-color);
+  height: 2.5rem;
 }
 
 p.title {
   margin: 0;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
 }
 /* ----Announcements Card---- */
 
